@@ -1,7 +1,7 @@
 // Setting Margin -------------------->
 var margin = {top: 20, right: 20, bottom: 630, left: 60},
-    width = 1400 - margin.right - margin.left,
-    height = 1000 - margin.top - margin.bottom;
+    width = 1000 - margin.right - margin.left,
+    height = 950 - margin.top - margin.bottom;
 
 // SVG and g -------------------->
 var svg=d3.select('body')

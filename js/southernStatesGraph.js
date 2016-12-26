@@ -1,6 +1,6 @@
 //Defining margin values
 var margin={top:40, bottom:100, left:150, right:50},
-    width=1420-margin.left-margin.right,
+    width=1200-margin.left-margin.right,
     height=600-margin.top-margin.bottom;
 
 

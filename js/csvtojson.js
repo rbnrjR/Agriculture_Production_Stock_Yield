@@ -1,25 +1,25 @@
 const readline = require('readline');
 const fs = require('fs');
 var header =[],
-    jArray1=[],
-    jArray2=[],
-    jArray3=[],
-    jArray4=[],
-    obj1={},
-    obj2={},
-    obj3={},
-    obj4={},
-    isHeader=true;
+    jArray1=[],  // Array for foodgrains
+    jArray2=[],  // Array for oilseeds
+    jArray3=[],  // Array for commercial
+    jArray4=[],  // Array for southernStates
+    obj1={},     // Objects for foodgrains
+    obj2={},     // Objects for oilseeds
+    obj3={},     // Objects for commercial
+    obj4={},     // Objects for southernStates
+    isHeader=true,
+    flag1= false,
+    flag2= false,
+    flag3= false,
+    flag4= false;
 //Reading the csv file
 const reader= readline.createInterface({
 	input: fs.createReadStream('../csv/Production-Department_of_Agriculture_and_Cooperation_1.csv', 'utf-8')
 });
 reader.on('line', function(line) {
 	var content= line.split(',');
-	var flag1= false;
-  var flag2= false;
-  var flag3= false;
-  var flag4= false;
 	for(var i=0;i<content.length;i++) {
 		if(isHeader) { //loading elements into header array
 			header[i]= content[i].trim();
